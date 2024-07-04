@@ -17,6 +17,7 @@ public class DemoApplication {
 		System.out.println(nam);
 		int[] array = new int[5];
 
+
 		// Fill the array as required
 		fillArray(array);
 
