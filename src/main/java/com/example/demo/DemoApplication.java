@@ -6,13 +6,13 @@ public class DemoApplication {
 
 	public static void main(String[] args) {
 
-		Animals animals = new Animals("abdullah",27);
+		Animals animals = new Animals("abdullah",27,"Farooqui");
 		animals.setName("bills");
 		String nam = animals.getName();
-		System.out.println(nam);
+
 		int[] array = new int[5];
-
-
+        String age = String.valueOf(animals.getAge());
+        System.out.println(age + " " + nam);
 		// Fill the array as required
 		fillArray(array);
 
