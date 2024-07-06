@@ -1,16 +1,23 @@
 package com.example.demo;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.Arrays;
+
 @SpringBootApplication
 public class DemoApplication {
 
 	public static void main(String[] args) {
 
 		Animals animals = new Animals("abdullah",27,"Farooqui");
-		animals.setName("bills");
-		String nam = animals.getName();
+		NotAnimals notAnimals = new NotAnimals("","NadanParinday");
 
-		int[] array = new int[5];
+		animals.setName("bills");
+
+		String nam = animals.getName();
+		notAnimals.setName(nam);
+        String notanimalname = notAnimals.getName();
+        System.out.println(notanimalname);
+		String[] array = new String[5];
         String age = String.valueOf(animals.getAge());
         System.out.println(age + " " + nam);
 		// Fill the array as required
@@ -18,17 +25,18 @@ public class DemoApplication {
 
 		// Print the array to verify
 		printArray(array);
+
+
 	}
 
-	public static void fillArray(int[] array) {
-		// Example values: -2, 1, 0
-		for(int i = 0;i<array.length;i++){
-			array[i] = i+1;
-		}
+	public static void fillArray(String[] array) {
+		NotAnimals notAnimals = new NotAnimals("","Grahams");
+
+        Arrays.setAll(array, i -> notAnimals.getName()+i+1);
 	}
 
-	public static void printArray(int[] array) {
-		for (int val : array) {
+	public static void printArray(String[] array) {
+		for (String val : array) {
 			System.out.print(val + " ");
 		}
 		System.out.println();
